@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	
+<head>
+	<title>Ludos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background:#e1efbb
+	url('/static/tabuleiro.jpg');background-size: 100% 100%;background-repeat: no-repeat;background-attachment: fixed;">
+
+	<nav id="sidebar" class="w3-sidebar  w3-bar-block w3-top w3-collapse w3-text-black" style="z-index:3;width:200px;bacatckground-color: #f1f1f1;" id="mySidebar">
+	  <a href="home.html"  class="w3-bar-item w3-padding-16 w3-text-white w3-button w3-hover-black" style="background-color:#007bff;">Home</a> 
+	  <a href="catalogo.html"  class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Jogos - recolhimento/entrega</a> 
+	  <a href="#"  class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Aluguel - mesas/jogos</a>  
+	  <a href="#"  class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Estatisticas</a> 
+	  <a href="#"  class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Perfil</a> 
+	</nav>
+
+
+<div class="w3-main" style="margin-left:200px;height:100vh;">
+
+	<header class="w3-bar"style="background-color: #f1f1f1">
+		
+		<div class="w3-bar-item w3-hide-small" style="padding-bottom: 0px;">
+			<h2 class="w3-text-blue">LUDOS</h2>
+		</div>
+
+		<div class="w3-bar-item w3-left" style="padding-bottom: 0px;">
+			<h2><img src="/static/icon.svg"  width="40" height="40"></h2>
+		</div>
+
+
+		<div class="w3-bar-item w3-right w3-button w3-hide-large" onclick="toggleSidebar()">
+    		<h2><i class="fa fa-bars"></i></h2>
+    </div>
+		
+
+		<div class="w3-bar-item w3-middle w3-text-black" style="margin-left:0px;margin-top:20px">
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Busque um jogo" title="Type in a name">
+		</div>		
+		<div class="w3-bar-item  w3-right w3-text-black " >
+			<h2><a href="/" style="text-decoration: none;">Sair</a></h2>
+		</div>
+		<div class="w3-bar-item w3-right w3-text-blue " >
+			<h2>Cliente</h2>
+		</div>
+	</header>
+
+	<div class="w3-main w3-padding-32" style="height:100vh;">
+
+		<div class="w3-center" > 
+			<h1 style="background-color: rgba(255, 255, 255, 0.8)" > BOARD GAMES </h1>
+		</div>
+
+		<!-- First Photo Grid-->
+	  <div class="w3-row-padding">
+	    <div class="w3-third w3-container w3-margin-bottom">
+	      <img onclick="window.location.href='/jogo/bang'"  src="/static/bang.jpg" id="Game" value="bang"  alt="Norway" style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div id="myUL" class="w3-container w3-blue">
+	        <p ><b>Bang</b></p>
+	      </div>
+	    </div>
+	    <div class="w3-third w3-container w3-margin-bottom">
+	      <img onclick="window.location.href='/jogo/coup'" src="/static/coup.jpg"  alt="Norway" style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div id="myUL" class="w3-container w3-blue">
+	        <p ><b>Coup</b></p>
+	      </div>
+	    </div>
+	    <div class="w3-third w3-container">
+	      <img onclick="window.location.href='/jogo/:id'" src="/static/secret hitler.jpg"  alt="Norway" style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div id="myUL" class="w3-container w3-blue">
+	        <p ><b>Secret Hitler</b></p>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <!-- Second Photo Grid-->
+	  <div class="w3-row-padding">
+	    <div class="w3-third w3-container w3-margin-bottom">
+	      <img onclick="window.location.href='/jogo/:id'" src="/static/zombcide.jpg"  alt="Norway" style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div id="myUL" class="w3-container w3-blue">
+	        <p ><b>Zombcide</b></p>
+	      </div>
+	    </div>
+	    <div class="w3-third w3-container w3-margin-bottom">
+	      <img onclick="window.location.href='/jogo/:id'" src="/static/dixit.jpg"  alt="Norway" style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div id="myUL" class="w3-container w3-blue">
+	        <p ><b>Dixit</b></p>
+	      </div>
+	    </div>
+	    <div class="w3-third w3-container">
+	      <img onclick="window.location.href='/jogo/:id'" src="/static/pega em 6.jpg"  alt="Norway" style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div id="myUL" class="w3-container w3-blue">
+	        <p ><b>Pega em 6</b></p>
+	      </div>
+	    </div>
+	  </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	<!--<script defer src="../scripts/catalogo.js"> </script>-->
+	<script>
+		function toggleSidebar() {
+			sidebar = document.getElementById("sidebar");
+			if (sidebar.style.display == "none") {
+				sidebar.style.display = "block"
+			} else {
+				sidebar.style.display = "none"
+			}
+		}
+		function myFunction() {
+	    var input, filter, div, a, i, txtValue;
+	    input = document.getElementById("myInput");
+	    filter = input.value.toUpperCase();
+	    div = document.getElementById("myUL");
+	    p = div.getElementsByTagName("p");
+	    for (i = 0; i < p.length; i++) {
+	        a = p[i].getElementsByTagName("a")[0];
+	        txtValue = a.textContent || a.innerText;
+	        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	            p[i].style.display = "";
+	        } else {
+	            p[i].style.display = "none";
+	        }
+	    }
+		}
+	</script>
+</body>
+
+</html>

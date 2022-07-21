@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>Ludos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		function toggleSidebar() {
+			sidebar = document.getElementById("sidebar");
+			if (sidebar.style.display == "none") {
+				sidebar.style.display = "block"
+			} else {
+				sidebar.style.display = "none"
+			}
+		}
+	</script>
+	<script type="text/javascript" src="../jogos.json"></script>
+</head>
+
+<body style="background:#00004d;">
+
+	<nav id="sidebar" class="w3-sidebar  w3-bar-block w3-top w3-collapse w3-text-black"
+		style="z-index:3;width:200px;background-color: #f1f1f1;" id="mySidebar">
+		<a href="../home.html" class="w3-bar-item w3-padding-16 w3-text-white w3-button w3-hover-black" style="background-color:#007bff;">Home</a>
+		<a href="../catalogo.html" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Jogos - recolhimento/entrega</a>
+		<a href="#" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Aluguel - mesas/jogos</a>
+		<a href="#" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Estatisticas</a>
+		<a href="#" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Perfil</a>
+	</nav>
+
+	<header class="w3-bar"style="background-color: #f1f1f1">
+		
+		<div class="w3-bar-item w3-hide-small" style="padding-bottom: 0px;">
+			<h2 class="w3-text-blue" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LUDOS</h2>
+		</div>
+
+		<div class="w3-bar-item w3-left" style="padding-bottom: 0px;">
+			<h2><img src="/static/icon.svg"  width="40" height="40"></h2>
+		</div>
+
+		<div class="w3-bar-item w3-right w3-button w3-hide-large" onclick="toggleSidebar()">
+    		<h2><i class="fa fa-bars"></i></h2>
+    </div>
+		
+
+		
+		<div class="w3-bar-item  w3-right w3-text-black " >
+			<h2><a href="/" style="text-decoration: none;">Sair</a></h2>
+		</div>
+		<div class="w3-bar-item w3-right w3-text-blue " >
+			<h2>Cliente</h2>
+		</div>
+	</header>
+
+
+	<div class="w3-main" style="margin-left:300px;height:100vh;">
+
+	<div id="boardgame" style="margin-left:400px;margin-top:100px">
+		<div class="w3-third  w3-container w3-margin-bottom">
+	      <img  src="/static/bang.jpg" id="Game" value="bang"  style="width:100%;height:600px" class="w3-hover-opacity">
+	      <div class="w3-container w3-blue">
+	        <h1 id="demo"></h1>
+					 <h2 class="w3-right" id="demo1"></h1>
+	        <p id="demo2"></p>
+	      </div>
+	    </div>
+	</div>
+
+		
+	<script>
+		
+
+		function populatejogo(boardgame) {
+			document.getElementById("demo").innerHTML = boardgame.name;
+			document.getElementById("demo1").innerHTML = boardgame.price;
+			document.getElementById("demo2").innerHTML = boardgame.description;
+			//fetch('https://galvaooooo.davifausto.repl.co/api/jogo/ded')
+		}
+	</script>
+</body>
+</html>

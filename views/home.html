@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>Ludos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		function toggleSidebar() {
+			sidebar = document.getElementById("sidebar");
+			if (sidebar.style.display == "none") {
+				sidebar.style.display = "block"
+			} else {
+				sidebar.style.display = "none"
+			}
+		}
+		
+	</script>
+</head>
+
+<body style="background:#e1efbb
+	url('/static/tabuleiro.jpg');background-size: 100% 100%;background-repeat: no-repeat;background-attachment: fixed;">
+
+	<nav id="sidebar" class="w3-sidebar  w3-bar-block w3-top w3-collapse w3-text-black"
+		style="z-index:3;width:200px;background-color: #f1f1f1;" id="mySidebar">
+		<a href="home.html" class="w3-bar-item w3-padding-16 w3-text-white w3-button w3-hover-black" style="background-color:#007bff;">Home</a>
+		<a href="catalogo.html" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Jogos - recolhimento/entrega</a>
+		<a href="#" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Aluguel - mesas/jogos</a>
+		<a href="#" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Estatisticas</a>
+		<a href="#" class="w3-bar-item w3-padding-16 w3-button w3-hover-black">Perfil</a>
+	</nav>
+
+	<div class="w3-main" style="margin-left:200px;height:100vh;">
+	
+		<header class="w3-bar"style="background-color: #f1f1f1">
+			
+			<div class="w3-bar-item w3-hide-small" style="padding-bottom: 0px;">
+				<h2 class="w3-text-blue">LUDOS</h2>
+			</div>
+	
+			<div class="w3-bar-item w3-left" style="padding-bottom: 0px;">
+				<h2><img src="/static/icon.svg"  width="40" height="40"></h2>
+			</div>
+	
+			<div class="w3-bar-item w3-right w3-button w3-hide-large" onclick="toggleSidebar()">
+	    		<h2><i class="fa fa-bars"></i></h2>
+	    </div>
+			
+			<div class="w3-bar-item  w3-right w3-text-black " >
+				<h2><a href="/" style="text-decoration: none;">Sair</a></h2>
+			</div>
+			<div class="w3-bar-item w3-right w3-text-blue " >
+				<h2 id="us">Cliente</h2>
+			</div>
+		</header>
+
+
+		<!--<div class="w3-row-padding w3-padding-large  w3-text-black" style="margin-top:100px;">
+		<div class="w3-col l6 m12 s12" style="padding-right:128px">
+			<h2 class="w3-center w3-round-large" style="background-color: rgba(255, 255, 255, 0.8)"> Sistema de Gerenciamento de Luderias </h2>
+			<p class="w3-round-large" style="background-color: rgba(255, 255, 255, 0.8)"> A luderia consiste em um tipo de estabelecimento comercial focado no ramo do entretenimento de jogos de tabuleiro, onde os clientes através de um "cardápio de jogos" escolhem o que querem jogar e podem ser auxiliados por monitores que mostram como funciona a loga em relação a taxas e manipulação dos jogos, apresentam e tirão duvidas de jogos, além de também fazerem reservas e gerenciar aluquéis dos jogos.</p>
+		</div>
+				
+		<div class="w3-col l6 m12 s12" style="padding-left:128px">
+			<h2 class="w3-round-large w3-center" style="background-color: rgba(255, 255, 255, 0.8)">Promoções do dia</h2>
+			<ul class="w3-ul w3-round-large" style="background-color: rgba(255, 255, 255, 0.8)"> 
+				<li > PAGUE 3 JOGOS E LEVE 5 </li> 
+				<li> COMBO LUDOS BURGUER COM BATATA E REFRI</li>
+				<li> BOLICHE MÁGICO MAIS BARATO NA QUINTA-FEIRA</li>
+				<li> ALUGUEL DE MESA PARA 10 PESSOAS 25% MAIS BARATO</li>
+				<li> BANG E COUPLE COMBO CLÁSSICO</li>
+			</ul>
+		</div>
+	</div>-->
+		<div class="w3-row-padding w3-padding-10" id="about" style="margin-top:100px;margin-left:100px;opacity: 0.9;">
+			<div class="w3-col l6 m12 s12 w3-padding-large w3-round" style="background-color: #f1f1f1">
+				<h2 class="w3-center">Sistema de Gerenciamento de Luderias</h2><hr style="border: 2px solid black; border-radius: 2em;">
+				<p class="w3-large" style="text-align: justify;">A luderia consiste em um tipo de estabelecimento comercial focado no ramo do entretenimento
+					de jogos de tabuleiro, onde os clientes através de um "cardápio de jogos" escolhem o que querem jogar e podem
+					ser auxiliados por monitores que mostram como funciona a loga em relação a taxas e manipulação dos jogos,
+					apresentam e tirão duvidas de jogos, além de também fazerem reservas e gerenciar aluquéis dos jogos.</p>
+			</div>
+			<div class="w3-col l6 m12 s12 w3-round " style="padding-left:40px;">
+				<div class="w3-white ">
+        	<div class="w3-container w3-padding w3-black">
+          <h4>Promoções</h4>
+       		</div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="/static/combo1.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px;margin-top:-10px">
+            <span class="w3-large">PAGUE 3 JOGOS E LEVE 5</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="/static/combo2.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px;">
+            <span class="w3-large">COMBO LUDOS BURGUER COM BATATA E REFRI</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="/static/combo3.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">BOLICHE MÁGICO MAIS BARATO NA QUINTA-FEIRA</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="/static/combo4.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">ALUGUEL DE MESA PARA 10 PESSOAS 25% MAIS BARATO</span>
+          </li>
+        </ul>
+				</div>
+      </div>
+<!-- 				<div class="w3-display-container">
+					<div class="w3-display-topleft w3-container"style="background-color: #e6e600; border-radius: 2em 1em 4em / 0.5em 3em;">
+						<h3 style=font-family:Comic Sans MS;>Promoções do dia</h3>
+						<ul>
+							<li class="w3-text" style=font-family:Comic Sans MS;> PAGUE 3 JOGOS E LEVE 5 </li>
+							<li class="w3-text" style=font-family:Comic Sans MS;> COMBO LUDOS BURGUER COM BATATA E REFRI</li>
+							<li class="w3-text" style=font-family:Comic Sans MS;> BOLICHE MÁGICO MAIS BARATO NA QUINTA-FEIRA</li>
+							<li class="w3-text" style=font-family:Comic Sans MS;> ALUGUEL DE MESA PARA 10 PESSOAS 25% MAIS BARATO</li>
+							<li class="w3-text" style=font-family:Comic Sans MS;> BANG E COUPLE COMBO CLÁSSICO</li>
+						</ul>
+					</div>
+				</div> -->
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+<!-- 	<script>
+		fetch('https://galvaooooo.davifausto.repl.co/api/home')
+		.then(response => response.json())
+		.then(data => user(data))
+
+		function user(usuario) {
+			document.getElementById("us").innerHTML = usuario.name;
+		}
+	</script> -->
+</body>
+
+</html>

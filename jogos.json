@@ -1,0 +1,32 @@
+[ 
+	{  
+	  "name": "dixit",
+	  "price": "90.00",
+	  "description": "Um jogo leve e divertido para jogar com os amigos",
+	},
+  {  
+	 	"name": "bang",
+	  "price": "180.00",
+	  "description": "Jogo de times e sobrevivencia",
+	},
+	{ 
+		"name": "zombcide",
+	  "price": "500.00",
+	  "description": "Zumbi querem te devorar",
+	},
+	{ 
+		"name": "coup",
+	  "price": "400.00",
+	  "description": "Jogo de blefe",
+	},
+	{ 
+		"name": "secret hitler",
+	  "price": "300.00",
+	  "description": "Blefe e apostas",
+	},
+	{ 
+		"name": "pega em 6", 
+	  "price": "200.00",
+	  "description": "Jogo de cartas",
+	}
+]
