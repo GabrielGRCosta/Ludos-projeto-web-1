@@ -75,11 +75,19 @@
 		
 
 		function populatejogo(boardgame) {
-			document.getElementById("demo").innerHTML = boardgame.name;
+			document.getElementById("demo").innerHTML =     boardgame.name;
 			document.getElementById("demo1").innerHTML = boardgame.price;
 			document.getElementById("demo2").innerHTML = boardgame.description;
-			//fetch('https://galvaooooo.davifausto.repl.co/api/jogo/ded')
+
+
 		}
+
+const name = window.location.href.split("/")[window.location.href.split("/").length -1]
+fetch(`https://trabalho-web.davifausto.repl.co/api/jogo/${name}`)
+  .then(response => response.json())
+    .then(jogo => populatejogo(jogo));
+
+    
 	</script>
 </body>
 </html>
